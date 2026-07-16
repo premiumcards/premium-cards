@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium-cards-shop - Premium Virtual Card Platform</title>
+    <meta
+      name="description"
+      content="Premium-cards-shop - secure, instant, and professional virtual card marketplace."
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-locked">
+    <div class="money-rain" aria-hidden="true"></div>
+    <section class="login-screen" id="loginScreen" aria-label="Login required">
+      <form class="login-panel" id="loginForm">
+        <a class="brand login-brand" href="#home" aria-label="Premium-cards-shop home">
+          <span>PREMIUM</span>
+          <strong>CARDS</strong>
+        </a>
+        <p class="eyebrow">Member Access</p>
+        <h1>Login Required</h1>
+        <p class="login-copy">Website use karne ke liye pehle login karein.</p>
+        <label>
+          <span>Your Name</span>
+          <input id="loginName" name="name" type="text" autocomplete="name" placeholder="Enter your name" required />
+        </label>
+        <label>
+          <span>Telegram Username</span>
+          <input
+            id="loginTelegram"
+            name="telegram"
+            type="text"
+            autocomplete="username"
+            placeholder="@username"
+            required
+          />
+        </label>
+        <button class="primary-button full" type="submit">Login & Continue</button>
+        <a class="ghost-button full" href="https://t.me/Premium_cards_shop_support" target="_blank" rel="noreferrer">
+          Contact Admin
+        </a>
+      </form>
+    </section>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Premium-cards-shop home">
+        <span>PREMIUM</span>
+        <strong>CARDS</strong>
+      </a>
+      <nav class="top-actions" aria-label="Primary">
+        <span class="user-pill" data-user-label hidden></span>
+        <button class="ghost-button" type="button" data-open-orders>My Orders</button>
+        <a class="ghost-button" href="https://t.me/Premium_cards_shop_support" target="_blank" rel="noreferrer">
+          Contact Admin
+        </a>
+        <button class="ghost-button" type="button" data-logout hidden>Logout</button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero-section">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Secure Asymmetric Network</p>
+          <h1>Premium-cards-shop</h1>
+          <p class="hero-subtitle">The Most Trusted Premium Virtual Card Platform</p>
+          <p class="hero-copy">
+            Secure. Instant. Global. Built for professionals who demand reliability without compromise.
+          </p>
+          <a class="primary-button" href="#marketplace">Explore Marketplace</a>
+        </div>
+        <div class="hero-card" aria-label="Premium card preview">
+          <div class="chip"></div>
+          <div class="card-network">VISA</div>
+          <div class="card-number">•••• •••• •••• 9048</div>
+          <div class="card-row">
+            <span>
+              <small>Card Holder</small>
+              PREMIUM USER
+            </span>
+            <span>
+              <small>Valid Thru</small>
+              06/2029
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="marketplace-section" id="marketplace">
+        <div class="section-heading">
+          <span class="section-kicker">Choose Your Premium Card</span>
+          <h2>Premium Card</h2>
+          <p>Select an interface profile perfectly calibrated to your volume metrics.</p>
+        </div>
+
+        <div class="filters" aria-label="Card filters">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="visa">VISA <span>9</span></button>
+          <button class="filter" type="button" data-filter="mastercard">Mastercard <span>5</span></button>
+          <button class="filter" type="button" data-filter="rupay">RuPay <span>8</span></button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="payment-section">
+        <div>
+          <p class="eyebrow">Payment Verified</p>
+          <h2>Verify Your Payment</h2>
+          <p>
+            Scan the UPI QR or pay to the UPI ID, then send your payment screenshot to Telegram support.
+            Refund is available according to policy.
+          </p>
+        </div>
+        <div class="steps" aria-label="Payment steps">
+          <div>
+            <span>1</span>
+            <strong>Buy A Card</strong>
+            <p>Select card tier and initiate payment.</p>
+          </div>
+          <div>
+            <span>2</span>
+            <strong>Send Screenshot</strong>
+            <p>Share your payment receipt with admin.</p>
+          </div>
+          <div>
+            <span>3</span>
+            <strong>Admin Verification</strong>
+            <p>Admin verifies and delivers your legal digital product.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="policy-section" id="refund-policy">
+        <p class="eyebrow">Refund Policy</p>
+        <h2>Refund Available</h2>
+        <p>
+          Refund is available when payment is verified but the order is not delivered. Send the payment screenshot
+          and order ID to Telegram support for admin review.
+        </p>
+      </section>
+
+      <section class="activity-strip" aria-label="Recent activity">
+        <span>Dhruv</span>
+        <strong>Bought Mastercard</strong>
+        <em>+₹7,200</em>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Premium-cards-shop © 2026</p>
+      <div>
+        <a href="#">Terms of Service</a>
+        <a href="#refund-policy">Refund Policy</a>
+        <a href="https://t.me/Premium_cards_shop_support" target="_blank" rel="noreferrer">Telegram Support</a>
+      </div>
+      <button class="admin-link" type="button" data-open-admin>Admin Login</button>
+    </footer>
+
+    <dialog class="checkout-dialog" id="checkoutDialog" aria-labelledby="checkoutTitle">
+      <form method="dialog">
+        <button class="close-dialog" value="close" aria-label="Close checkout">×</button>
+      </form>
+      <div class="dialog-grid">
+        <div class="dialog-card" id="dialogCard"></div>
+        <div class="dialog-copy">
+          <p class="eyebrow">Secure Checkout</p>
+          <h2 id="checkoutTitle">Complete Payment</h2>
+          <p id="checkoutSummary"></p>
+          <div class="payment-box">
+            <span>Gateway</span>
+            <img class="qr-code" id="paymentQr" src="assets/payment-qr.png" alt="UPI QR code for Premium-cards-shop payment" />
+            <strong id="gatewayName">UPI Payment</strong>
+            <small>UPI ID: <span id="upiId">shaileshpnl@fam</span></small>
+            <small id="supportMessage">Pay full amount</small>
+          </div>
+          <label class="checkout-field">
+            <span>Telegram Username</span>
+            <input id="checkoutTelegram" type="text" placeholder="@username" required />
+          </label>
+          <label class="checkout-field">
+            <span>Payment Screenshot</span>
+            <input id="paymentScreenshot" type="file" accept="image/*" required />
+          </label>
+          <button class="primary-button full" id="paymentDone" type="button">Payment Done</button>
+          <p class="checkout-note" id="checkoutMessage" hidden>Please kindly wait for receiving card.</p>
+          <a class="ghost-button full" id="sendReceipt" href="#" target="_blank" rel="noreferrer">Telegram Support</a>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="orders-dialog" id="ordersDialog" aria-labelledby="ordersTitle">
+      <form method="dialog">
+        <button class="close-dialog" value="close" aria-label="Close orders">×</button>
+      </form>
+      <h2 id="ordersTitle">My Orders</h2>
+      <div class="order-list" id="ordersList"></div>
+    </dialog>
+
+    <dialog class="admin-login-dialog" id="adminLoginDialog" aria-labelledby="adminLoginTitle">
+      <form method="dialog">
+        <button class="close-dialog" value="close" aria-label="Close admin login">Ã—</button>
+      </form>
+      <form class="admin-login-form" id="adminLoginForm">
+        <p class="eyebrow">Owner Access</p>
+        <h2 id="adminLoginTitle">Admin Login</h2>
+        <label>
+          <span>Owner Password</span>
+          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="Enter owner password" required />
+        </label>
+        <p class="form-error" id="adminLoginError" hidden>Wrong password.</p>
+        <button class="primary-button full" type="submit">Open Admin Panel</button>
+      </form>
+    </dialog>
+
+    <dialog class="admin-panel-dialog" id="adminPanelDialog" aria-labelledby="adminPanelTitle">
+      <form method="dialog">
+        <button class="close-dialog" value="close" aria-label="Close admin panel">Ã—</button>
+      </form>
+      <div class="admin-panel">
+        <div class="admin-panel-header">
+          <div>
+            <p class="eyebrow">Owner Dashboard</p>
+            <h2 id="adminPanelTitle">Admin Panel</h2>
+          </div>
+          <button class="ghost-button" type="button" data-admin-lock>Lock Admin</button>
+        </div>
+        <div class="admin-stats" id="adminStats"></div>
+        <section>
+          <h3>All User Login Information</h3>
+          <div class="admin-list" id="adminUsers"></div>
+        </section>
+        <section>
+          <h3>Card Buying Information</h3>
+          <div class="admin-list" id="adminOrders"></div>
+        </section>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
