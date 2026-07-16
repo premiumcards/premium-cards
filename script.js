@@ -119,7 +119,7 @@ const authStorageKey = "premiumCardsShopUser";
 const usersStorageKey = "premiumCardsShopUsers";
 const ordersStorageKey = "premiumCardsShopOrders";
 const adminSessionKey = "premiumCardsShopAdminUnlocked";
-const adminPasswordHash = "f7f2e286f369bda632f732a7848ae945bb103c47638d83e25afaca90bfcc36d8";
+const adminPasswordHash = "fd75f8739f06f266cdf57b1728b2def3d83016e8afdbc9726a49984009cedc4e";
 let currentCheckoutProduct = null;
 
 function getSavedUser() {
