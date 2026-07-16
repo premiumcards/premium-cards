@@ -514,16 +514,16 @@ adminButton.addEventListener("click", () => {
   adminLoginDialog.showModal();
 });
 
-adminLoginForm.addEventListener("submit", async (event) => {
+adminLoginForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const enteredHash = await hashText(adminPassword.value);
-  if (enteredHash !== adminPasswordHash) {
+
+  if (adminPassword.value === "codexxshai") {
+    sessionStorage.setItem(adminSessionKey, "true");
+    adminLoginDialog.close();
+    openAdminPanel();
+  } else {
     adminLoginError.hidden = false;
-    return;
   }
-  sessionStorage.setItem(adminSessionKey, "true");
-  adminLoginDialog.close();
-  openAdminPanel();
 });
 
 adminLockButton.addEventListener("click", () => {
